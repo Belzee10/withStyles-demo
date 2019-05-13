@@ -27,7 +27,8 @@ const WithStyles = WrappedComponent => {
       "warning",
       "indigo",
       "orange",
-      "black"
+      "black",
+      "white"
     ]),
     textColor: PropTypes.oneOf([
       "primary",
@@ -36,7 +37,8 @@ const WithStyles = WrappedComponent => {
       "warning",
       "indigo",
       "orange",
-      "black"
+      "black",
+      "white"
     ])
   };
 
@@ -46,7 +48,7 @@ const WithStyles = WrappedComponent => {
     border: wrappedCmpDefaultProps || false,
     rounded: wrappedCmpDefaultProps || false,
     bgColor: wrappedCmpDefaultProps || "primary",
-    textColor: wrappedCmpDefaultProps || "black"
+    textColor: wrappedCmpDefaultProps || "white"
   };
 
   return Styled;
