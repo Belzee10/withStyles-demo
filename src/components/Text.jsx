@@ -15,7 +15,7 @@ Text.propTypes = {
   /**
    * Type of the element
    */
-  type: PropTypes.oneOf(["span, label, p"]),
+  type: PropTypes.oneOf(["span", "label", "p"]),
   /**
    *  Component's children
    */
