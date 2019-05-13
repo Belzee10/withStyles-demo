@@ -1,16 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Button = props => {
-  const { children, className, style } = props;
+const Text = props => {
+  const { type, children, className, style } = props;
+  const Tag = type;
   return (
-    <button className={className} style={style}>
+    <Tag className={className} style={style}>
       {children}
-    </button>
+    </Tag>
   );
 };
 
-Button.propTypes = {
+Text.propTypes = {
+  /**
+   * Type of the element
+   */
+  type: PropTypes.oneOf(["span, label, p"]),
   /**
    *  Component's children
    */
@@ -28,10 +33,11 @@ Button.propTypes = {
   style: PropTypes.objectOf(PropTypes.any)
 };
 
-Button.defaultProps = {
+Text.defaultProps = {
+  type: "span",
   children: null,
   className: "",
   style: {}
 };
 
-export default Button;
+export default Text;
