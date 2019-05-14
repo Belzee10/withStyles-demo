@@ -22,7 +22,7 @@ const Card = props => {
     <Box className={className} style={style}>
       <Box {...cardBodySettings}>
         <Header {...headerSettings} type="h2">
-          Lorem ipsum dolor
+          Eveniet a tempora
         </Header>
         <Text {...textSettings}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
