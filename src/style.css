@@ -94,3 +94,10 @@ html,
 .text-white {
   background-color: #ffffff;
 }
+
+.cursor-default {
+  cursor: default;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

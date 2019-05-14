@@ -8,14 +8,19 @@ const buildClass = props => {
     border: "border",
     rounded: "rounded",
     bgColor: "bg",
-    textColor: "text"
+    textColor: "text",
+    cursor: "cursor"
   };
 
   let classes = "";
-  Object.keys(props).forEach(prop => {
-    if (propNamesMapped.hasOwnProperty(prop))
-      classes += ` ${propNamesMapped[prop]}-${props[prop]}`;
-  });
+  for (const key in props) {
+    if (propNamesMapped.hasOwnProperty(key)) {
+      classes +=
+        typeof props[key] === "string"
+          ? ` ${propNamesMapped[key]}-${props[key]}` // the prop value is a String
+          : ` ${propNamesMapped[key]}`; /// the prop value is a Boolean
+    }
+  }
   return classes;
 };
 
@@ -29,7 +34,6 @@ const WithStyles = WrappedComponent => {
     const className = buildClass(props);
     const newProps = { ...props };
     newProps.className = className;
-    console.log(className);
 
     return <WrappedComponent {...newProps} />;
   };
@@ -39,6 +43,7 @@ const WithStyles = WrappedComponent => {
     margin: PropTypes.oneOf(["0", "1", "2", "3"]),
     border: PropTypes.bool,
     rounded: PropTypes.bool,
+    cursor: PropTypes.oneOf(["default", "pointer"]),
     bgColor: PropTypes.oneOf([
       "primary",
       "secondary",
@@ -66,6 +71,7 @@ const WithStyles = WrappedComponent => {
     margin: wrappedCmpDefaultProps || "0",
     border: wrappedCmpDefaultProps || false,
     rounded: wrappedCmpDefaultProps || false,
+    cursor: wrappedCmpDefaultProps || "default",
     bgColor: wrappedCmpDefaultProps || "primary",
     textColor: wrappedCmpDefaultProps || "white"
   };
