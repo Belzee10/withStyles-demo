@@ -16,7 +16,7 @@ const Card = props => {
         </Text>
       </Box>
       <Box>
-        <Button bgColor="primary" padding="2">
+        <Button bgColor="primary" padding="2" border={true}>
           Book now
         </Button>
       </Box>
