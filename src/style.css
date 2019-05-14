@@ -12,29 +12,29 @@ html,
 }
 
 .p-0 {
-  padding: 0;
+  padding: 0rem;
 }
 .p-1 {
-  padding: 1;
+  padding: 1rem;
 }
 .p-2 {
-  padding: 2;
+  padding: 2rem;
 }
 .p-3 {
-  padding: 3;
+  padding: 3rem;
 }
 
 .m-0 {
-  padding: 0;
+  padding: 0rem;
 }
 .m-1 {
-  padding: 1;
+  padding: 1rem;
 }
 .m-2 {
-  padding: 2;
+  padding: 2rem;
 }
 .m-3 {
-  padding: 3;
+  padding: 3rem;
 }
 
 .border {

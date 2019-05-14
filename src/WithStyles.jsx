@@ -1,7 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const buildClass = () => {};
+const buildClass = props => {
+  const propNamesMapped = {
+    padding: "p",
+    margin: "m",
+    border: "border",
+    rounded: "rounded",
+    bgColor: "bg",
+    textColor: "text"
+  };
+
+  let classes = "";
+  Object.keys(props).forEach(prop => {
+    if (propNamesMapped.hasOwnProperty(prop))
+      classes += ` ${propNamesMapped[prop]}-${props[prop]}`;
+  });
+  return classes;
+};
 
 const WithStyles = WrappedComponent => {
   const wrappedCmpDefaultProps =
@@ -11,7 +27,10 @@ const WithStyles = WrappedComponent => {
 
   const Styled = props => {
     const className = buildClass(props);
-    const newProps = Object.assign({}, props, className);
+    const newProps = { ...props };
+    newProps.className = className;
+    console.log(className);
+
     return <WrappedComponent {...newProps} />;
   };
 

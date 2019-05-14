@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import withStyles from "../WithStyles";
+
 const Button = props => {
   const { children, className, style } = props;
   return (
@@ -34,4 +36,4 @@ Button.defaultProps = {
   style: {}
 };
 
-export default Button;
+export default withStyles(Button);

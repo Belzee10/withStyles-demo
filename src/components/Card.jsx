@@ -16,7 +16,9 @@ const Card = props => {
         </Text>
       </Box>
       <Box>
-        <Button>Book now</Button>
+        <Button bgColor="primary" padding="2">
+          Book now
+        </Button>
       </Box>
     </Box>
   );
