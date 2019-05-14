@@ -8,17 +8,24 @@ import Text from "./Text";
 import Button from "./Button";
 
 const Card = props => {
-  const { className, style } = props;
+  const {
+    cardBodySettings,
+    cardFooterSettings,
+    buttonSettings,
+    textSettings,
+    className,
+    style
+  } = props;
   return (
     <Box className={className} style={style}>
-      <Box>
-        <Text>
+      <Box {...cardBodySettings}>
+        <Text {...textSettings}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
           incidunt delectus provident voluptates voluptatum ratione corporis.
         </Text>
       </Box>
-      <Box>
-        <Button>Book now</Button>
+      <Box {...cardFooterSettings}>
+        <Button {...buttonSettings}>Book now</Button>
       </Box>
     </Box>
   );

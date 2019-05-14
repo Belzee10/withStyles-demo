@@ -71,28 +71,28 @@ html,
 }
 
 .text-primary {
-  background-color: #007bff;
+  color: #007bff;
 }
 .text-secondary {
-  background-color: #6c757d;
+  color: #6c757d;
 }
 .text-danger {
-  background-color: #dc3545;
+  color: #dc3545;
 }
 .text-warning {
-  background-color: #ffc107;
+  color: #ffc107;
 }
 .text-indigo {
-  background-color: #6610f2;
+  color: #6610f2;
 }
 .text-orange {
-  background-color: #fd7e14;
+  color: #fd7e14;
 }
 .text-black {
-  background-color: #000000;
+  color: #000000;
 }
 .text-white {
-  background-color: #ffffff;
+  color: #ffffff;
 }
 
 .cursor-default {

@@ -9,7 +9,18 @@ const cardSettings = {
   border: true,
   rounded: true,
   padding: "2",
-  style: { width: "300px" }
+  style: { width: "300px" },
+  cardBodySettings: {},
+  cardFooterSettings: {},
+  textSettings: {},
+  buttonSettings: {
+    padding: "2",
+    border: true,
+    rounded: true,
+    cursor: "pointer",
+    bgColor: "primary",
+    textColor: "white"
+  }
 };
 
 function App() {
