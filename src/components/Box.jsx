@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import withStyles from "../WithStyles";
+
 const Box = props => {
   const { children, className, style } = props;
   return (
@@ -34,4 +36,4 @@ Box.defaultProps = {
   style: {}
 };
 
-export default Box;
+export default withStyles(Box);

@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import withStyles from "../WithStyles";
+
 const Text = props => {
   const { type, children, className, style } = props;
   const Tag = type;
@@ -40,4 +42,4 @@ Text.defaultProps = {
   style: {}
 };
 
-export default Text;
+export default withStyles(Text);

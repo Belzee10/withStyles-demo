@@ -13,6 +13,7 @@ const buildClass = props => {
   };
 
   let classes = "";
+  if (props.className !== undefined) classes = props.className;
   for (const key in props) {
     if (propNamesMapped.hasOwnProperty(key)) {
       classes +=
@@ -32,8 +33,7 @@ const WithStyles = WrappedComponent => {
 
   const Styled = props => {
     const className = buildClass(props);
-    const newProps = { ...props };
-    newProps.className = className;
+    const newProps = { ...props, className };
 
     return <WrappedComponent {...newProps} />;
   };

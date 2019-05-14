@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import withStyles from "../WithStyles";
+
 import Box from "./Box";
 import Text from "./Text";
 import Button from "./Button";
@@ -16,9 +18,7 @@ const Card = props => {
         </Text>
       </Box>
       <Box>
-        <Button bgColor="primary" padding="2" border={true}>
-          Book now
-        </Button>
+        <Button>Book now</Button>
       </Box>
     </Box>
   );
@@ -40,4 +40,4 @@ Card.defaultProps = {
   style: {}
 };
 
-export default Card;
+export default withStyles(Card);
