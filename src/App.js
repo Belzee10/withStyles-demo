@@ -10,8 +10,13 @@ const cardSettings = {
   rounded: true,
   padding: "2",
   style: { width: "300px" },
-  cardBodySettings: {},
+  cardBodySettings: {
+    padding: "2"
+  },
   cardFooterSettings: {},
+  headerSettings: {
+    margin: "0"
+  },
   textSettings: {},
   buttonSettings: {
     padding: "2",
@@ -25,7 +30,7 @@ const cardSettings = {
 
 function App() {
   return (
-    <Box className="main" border>
+    <Box className="main">
       <Card {...cardSettings} />
     </Box>
   );

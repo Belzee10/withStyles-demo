@@ -9,7 +9,9 @@ const buildClass = props => {
     rounded: "rounded",
     bgColor: "bg",
     textColor: "text",
-    cursor: "cursor"
+    cursor: "cursor",
+    textAlign: "text-align",
+    width: "width"
   };
 
   let classes = "";
@@ -44,6 +46,8 @@ const WithStyles = WrappedComponent => {
     border: PropTypes.bool,
     rounded: PropTypes.bool,
     cursor: PropTypes.oneOf(["default", "pointer"]),
+    textAlign: PropTypes.oneOf(["left", "right", "center"]),
+    width: PropTypes.oneOf(["0", "50", "100"]),
     bgColor: PropTypes.oneOf([
       "primary",
       "secondary",
@@ -52,7 +56,8 @@ const WithStyles = WrappedComponent => {
       "indigo",
       "orange",
       "black",
-      "white"
+      "white",
+      "light"
     ]),
     textColor: PropTypes.oneOf([
       "primary",
@@ -62,18 +67,21 @@ const WithStyles = WrappedComponent => {
       "indigo",
       "orange",
       "black",
-      "white"
+      "white",
+      "light"
     ])
   };
 
   Styled.deaultProps = {
-    padding: wrappedCmpDefaultProps || "0",
-    margin: wrappedCmpDefaultProps || "0",
-    border: wrappedCmpDefaultProps || false,
-    rounded: wrappedCmpDefaultProps || false,
-    cursor: wrappedCmpDefaultProps || "default",
-    bgColor: wrappedCmpDefaultProps || "primary",
-    textColor: wrappedCmpDefaultProps || "white"
+    padding: wrappedCmpDefaultProps || null,
+    margin: wrappedCmpDefaultProps || null,
+    border: wrappedCmpDefaultProps || null,
+    rounded: wrappedCmpDefaultProps || null,
+    cursor: wrappedCmpDefaultProps || null,
+    bgColor: wrappedCmpDefaultProps || null,
+    textColor: wrappedCmpDefaultProps || null,
+    textAlign: wrappedCmpDefaultProps || null,
+    width: wrappedCmpDefaultProps || null
   };
 
   return Styled;

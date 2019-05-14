@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import withStyles from "../WithStyles";
 
 import Box from "./Box";
+import Header from "./Header";
 import Text from "./Text";
 import Button from "./Button";
 
@@ -11,14 +12,18 @@ const Card = props => {
   const {
     cardBodySettings,
     cardFooterSettings,
-    buttonSettings,
+    headerSettings,
     textSettings,
+    buttonSettings,
     className,
     style
   } = props;
   return (
     <Box className={className} style={style}>
       <Box {...cardBodySettings}>
+        <Header {...headerSettings} type="h2">
+          Lorem ipsum dolor
+        </Header>
         <Text {...textSettings}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
           incidunt delectus provident voluptates voluptatum ratione corporis.
